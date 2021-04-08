@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <main>
+      <header class="nav">
+        <router-link to="/" class="nav-link nav-main">Все посты</router-link>
+        <router-link to="/add-new-post" class="nav-link nav-new">Добавить новый пост</router-link>
+      </header>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
@@ -21,8 +24,31 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.nav-link{
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.router-link-exact-active {
+  text-decoration: underline;
+}
+
+.nav-new{
+  margin-left: 30px;
+  padding-left: 30px;
+  border-left: 1px solid black;
 }
 </style>

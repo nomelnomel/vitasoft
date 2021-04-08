@@ -1,10 +1,15 @@
 <template>
-
+  <PostForm/>
 </template>
 
 <script>
+import PostForm from '../components/Post/Form'
+
 export default {
-  name: 'AddArticle'
+  components: {
+    PostForm
+  },
+  name: 'AddPost'
 }
 </script>
 

@@ -1,10 +1,17 @@
 <template>
-$END$
+ <div v-if="post">
+   {{ post }}
+ </div>
 </template>
 
 <script>
 export default {
-name: "Item"
+  props:['post'],
+  name: 'PostItem',
+  data() {
+    return {
+    }
+  },
 }
 </script>
 
